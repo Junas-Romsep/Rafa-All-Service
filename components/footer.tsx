@@ -13,7 +13,7 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-bold text-lg mb-4">Rafa Allservice AB</h3>
             <p className="text-gray-400 text-sm">
-              Professionella städ- och bemanningstjänster inom restaurangbranschen i Stockholm sedan 2010.
+              Professionella städ- och bemanningstjänster inom restaurangbranschen i Stockholm.
             </p>
           </div>
 
@@ -82,6 +82,11 @@ export default function Footer() {
               <div className="flex items-center gap-2 text-gray-400">
                 <MapPin size={16} />
                 <span>Stockholm, Sverige</span>
+              </div>
+              <div className="flex items-center gap-2 text-gray-400">
+                <MapPin size={16} />
+                <span>Org nummer:</span>
+                <span>5594993445</span>
               </div>
             </div>
           </div>

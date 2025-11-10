@@ -81,6 +81,12 @@ export default function Contact() {
                         072 278 55 80
                       </a>
                     </div>
+                    <div>
+                      <p className="text-slate-600 font-medium">Org nummer:</p>
+                      <a href="tel:+46722785580" className="text-[#29a5b7] hover:text-[#29a5b7]/90">
+                         5594993445
+                      </a>
+                    </div>
                   </div>
                 </div>
               </motion.div>
