@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "home": "Hem",
+    "about": "Om oss",
+    "services": "Tjänster",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "tagline": "Ett företag som finns där som din pålitlig partner, så att du kan fokusera på det som verkligen är viktigt – din verksamhet.",
+    "cta": "Boka en konsultation",
+    "whyUs": "Varför ni ska välja oss",
+    "experience": "Med över 10 års erfarenhet inom servicebranschen levererar vi konsekvent högkvalitativ service anpassad efter era unika behov.",
+    "learnMore": "Läs mer"
+  },
+  "about": {
+    "title": "Om oss",
+    "intro": "Vi är Rafael Arellano och Daniella Ruz Ramos, ett par både i livet och i arbetet.",
+    "description": "Tillsammans har vi lång erfarenhet inom servicebranschen och ett starkt engagemang för att leverera kvalitet och skapa trivsel i allt vi gör.",
+    "rafael": "Rafael, 28 år, har över 9 års erfarenhet av restaurangbranschen där han ansvarat för personal och drift.",
+    "daniella": "Daniella, 30 år, har omkring 10 års erfarenhet inom städning – från hem och kontor till specialuppdrag.",
+    "closing": "Tillsammans kompletterar vi varandra och arbetar med fokus på kvalitet, ansvar och kundnöjdhet."
+  },
+  "services": {
+    "title": "Våra tjänster",
+    "cleaning": "Servicios de limpieza",
+    "cleaningSubtitle": "Från kontorsstädning till förskolestädning – vi har erfarenhet för alla miljöer.",
+    "offices": "Kontor",
+    "schools": "Skolor",
+    "preschools": "Förskolor",
+    "restaurant": "Restaurangtjänster",
+    "restaurantSubtitle": "Professionella bemanningstjänster inom restaurang, café och event.",
+    "dishwashing": "Diskning",
+    "bartending": "Bartender",
+    "restaurantCleaning": "Restaurangstäd",
+    "unique": "Det som gör oss unika",
+    "experience10": "10+ års erfarenhet",
+    "flexible": "Flexibla lösningar – korta och långa uppdrag",
+    "customized": "Anpassat efter era behov",
+    "satisfaction": "100% nöjd kund – vi anpassar varje uppdrag efter kundens behov och önskemål."
+  },
+  "contact": {
+    "title": "Kontakta oss",
+    "address": "Granbacksvägen 1, 13545 Tyresö, Stockholm",
+    "email": "inforafaallservicev@gmail.com",
+    "phone": "Telefon",
+    "daniella": "Daniella Ruz Ramos",
+    "rafael": "Rafael Arellano",
+    "cta": "Mejla oss för att få en offert"
+  },
+  "footer": {
+    "company": "Rafa Allservice AB",
+    "rights": "Alla rättigheter förbehållna."
+  }
+}

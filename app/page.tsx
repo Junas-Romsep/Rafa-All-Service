@@ -1,65 +1,109 @@
-import Image from "next/image";
+"use client"
+
+import { useTranslations } from "next-intl"
+import { motion } from "framer-motion"
+import Link from "next/link"
 
 export default function Home() {
+  const t = useTranslations()
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main>
+      {/* Hero Section */}
+      <section className="relative min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-20 bg-cover bg-center"
+          style={{
+            backgroundImage: "url(/placeholder.svg?height=1200&width=1920&query=modern office cleaning workspace)",
+          }}
+        ></div>
+
+        <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-32 grid md:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="z-10"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#29a5b7] mb-6 leading-tight">
+              Rafa Allservice AB
+            </h1>
+            <p className="text-lg md:text-xl text-slate-700 mb-8 leading-relaxed text-balance">{t("home.tagline")}</p>
+            <motion.a
+              href="mailto:inforafaallservicev@gmail.com"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-block bg-[#29a5b7] hover:bg-teal-600 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-300"
+            >
+              {t("home.cta")}
+            </motion.a>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="z-10 hidden md:block"
           >
-            Documentation
-          </a>
+            <img src="/professional-cleaning-team.png" alt="Cleaning service" className="rounded-xl shadow-xl" />
+          </motion.div>
         </div>
-      </main>
-    </div>
-  );
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{t("home.whyUs")}</h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">{t("home.experience")}</p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { icon: "👥", title: "10+ År", desc: "Lång och gedigen erfarenhet inom branschen" },
+              { icon: "⚡", title: "Flexibel", desc: "Korta eller långsiktiga uppdrag" },
+              { icon: "✨", title: "Kvalitet", desc: "Anpassat efter era behov" },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-[#d3d3d3] from-teal-50 to-cyan-50 p-8 rounded-xl border border-teal-100 hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="text-4xl mb-4">{item.icon}</div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-2">{item.title}</h3>
+                <p className="text-slate-600">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <Link href="/about">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+                className="bg-[#29a5b7] text-white font-semibold px-8 py-3 rounded-lg hover:bg-slate-800 transition-colors duration-300"
+              >
+                {t("home.learnMore")}
+              </motion.button>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+    </main>
+  )
 }

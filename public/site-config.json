@@ -1,0 +1,25 @@
+{
+  "company": {
+    "name": "Rafa Allservice AB",
+    "description": "Professional cleaning and restaurant staffing services in Stockholm",
+    "founded": 2010,
+    "location": "Stockholm, Sweden",
+    "phone": "+46 8 123 4567",
+    "email": "info@rafaallservice.se"
+  },
+  "services": {
+    "cleaning": {
+      "title": "Cleaning Services",
+      "description": "Professional cleaning for offices, restaurants, and commercial spaces"
+    },
+    "staffing": {
+      "title": "Restaurant Staffing",
+      "description": "Reliable and trained kitchen and front-of-house staff"
+    }
+  },
+  "social": {
+    "facebook": "#",
+    "instagram": "#",
+    "linkedin": "#"
+  }
+}
