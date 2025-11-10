@@ -5,7 +5,8 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 
 export default function Home() {
-  const t = useTranslations()
+  // optional: you can remove next-intl entirely if you’re not using translations
+  const t = useTranslations("home")
 
   return (
     <main>
@@ -14,7 +15,8 @@ export default function Home() {
         <div
           className="absolute inset-0 opacity-20 bg-cover bg-center"
           style={{
-            backgroundImage: "url(/placeholder.svg?height=1200&width=1920&query=modern office cleaning workspace)",
+            backgroundImage:
+              "url(/placeholder.svg?height=1200&width=1920&query=modern office cleaning workspace)",
           }}
         ></div>
 
@@ -28,14 +30,16 @@ export default function Home() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#29a5b7] mb-6 leading-tight">
               Rafa Allservice AB
             </h1>
-            <p className="text-lg md:text-xl text-slate-700 mb-8 leading-relaxed text-balance">{t("home.tagline")}</p>
+            <p className="text-lg md:text-xl text-slate-700 mb-8 leading-relaxed">
+              {t("tagline")}
+            </p>
             <motion.a
               href="mailto:inforafaallservicev@gmail.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
               className="inline-block bg-[#29a5b7] hover:bg-teal-600 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-300"
             >
-              {t("home.cta")}
+              {t("cta")}
             </motion.a>
           </motion.div>
 
@@ -45,7 +49,11 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="z-10 hidden md:block"
           >
-            <img src="/professional-cleaning-team.png" alt="Cleaning service" className="rounded-xl shadow-xl" />
+            <img
+              src="/professional-cleaning-team.png"
+              alt="Cleaning service"
+              className="rounded-xl shadow-xl"
+            />
           </motion.div>
         </div>
       </section>
@@ -60,15 +68,31 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{t("home.whyUs")}</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">{t("home.experience")}</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              {t("whyUs")}
+            </h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              {t("experience")}
+            </p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: "👥", title: "10+ År", desc: "Lång och gedigen erfarenhet inom branschen" },
-              { icon: "⚡", title: "Flexibel", desc: "Korta eller långsiktiga uppdrag" },
-              { icon: "✨", title: "Kvalitet", desc: "Anpassat efter era behov" },
+              {
+                icon: "👥",
+                title: "10+ År",
+                desc: "Lång och gedigen erfarenhet inom branschen",
+              },
+              {
+                icon: "⚡",
+                title: "Flexibel",
+                desc: "Korta eller långsiktiga uppdrag",
+              },
+              {
+                icon: "✨",
+                title: "Kvalitet",
+                desc: "Anpassat efter era behov",
+              },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -76,10 +100,12 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-[#d3d3d3] from-teal-50 to-cyan-50 p-8 rounded-xl border border-teal-100 hover:shadow-lg transition-shadow duration-300"
+                className="bg-[#d3d3d3] p-8 rounded-xl border border-teal-100 hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-2">{item.title}</h3>
+                <h3 className="text-xl font-semibold text-slate-900 mb-2">
+                  {item.title}
+                </h3>
                 <p className="text-slate-600">{item.desc}</p>
               </motion.div>
             ))}
@@ -98,7 +124,7 @@ export default function Home() {
                 whileTap={{ scale: 0.98 }}
                 className="bg-[#29a5b7] text-white font-semibold px-8 py-3 rounded-lg hover:bg-slate-800 transition-colors duration-300"
               >
-                {t("home.learnMore")}
+                {t("learnMore")}
               </motion.button>
             </Link>
           </motion.div>
