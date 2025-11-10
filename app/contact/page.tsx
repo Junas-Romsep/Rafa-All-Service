@@ -35,7 +35,7 @@ export default function Contact() {
                   <FaMapMarkerAlt className="text-[#29a5b7] text-2xl" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-slate-900 mb-2">Address</h3>
+                  <h3 className="text-xl font-semibold text-slate-900 mb-2">Adress</h3>
                   <p className="text-slate-600">{t("contact.address")}</p>
                 </div>
               </motion.div>
