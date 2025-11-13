@@ -13,7 +13,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Rafa Allservice AB – Städ- och Restaurangbemanning",
+  title: "Rafa All Service AB – Städ- och Restaurangbemanning",
   description: "Professionella städ- och restaurangbemanningstjänster i Stockholm",
   generator: "v0.app",
   icons: {
