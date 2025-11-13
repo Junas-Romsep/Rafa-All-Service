@@ -3,20 +3,21 @@
 import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { FaCheckCircle } from "react-icons/fa"
+import Image from "next/image"
 
 export default function Services() {
   const t = useTranslations()
 
   const cleaningServices = [
-    { title: t("services.offices"), icon: "🏢" },
-    { title: t("services.schools"), icon: "📚" },
-    { title: t("services.preschools"), icon: "👶" },
+    { title: t("services.offices"), image: "/icon/Kontor.png" },
+    { title: t("services.schools"), image: "/icon/Skola.png" },
+    { title: t("services.preschools"), image: "/icon/Förskola.png" },
   ]
 
   const restaurantServices = [
-    { title: t("services.dishwashing"), icon: "🍽️" },
-    { title: t("services.bartending"), icon: "🍹" },
-    { title: t("services.restaurantCleaning"), icon: "🧹" },
+    { title: t("services.dishwashing"), image: "/icon/Diskning.png" },
+    { title: t("services.bartending"), image: "/icon/Bartender.png" },
+    { title: t("services.restaurantCleaning"), image: "/icon/Städning.png" },
   ]
 
   const uniqueQualities = [t("services.experience10"), t("services.flexible"), t("services.customized")]
@@ -55,9 +56,15 @@ export default function Services() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-[#d3d3d3] from-teal-50 to-cyan-50 p-8 rounded-xl border border-teal-100 hover:shadow-xl transition-shadow duration-300"
+                className="bg-white p-8 rounded-xl border-2 border-[#29a5b7] hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="text-5xl mb-4">{service.icon}</div>
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  width={64}
+                  height={64}
+                  className="h-16 w-16 object-contain mb-4"
+                />
                 <h3 className="text-xl font-semibold text-slate-900">{service.title}</h3>
               </motion.div>
             ))}
@@ -87,9 +94,15 @@ export default function Services() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className=" bg-[#d3d3d3] p-8 rounded-xl border border-slate-200 hover:shadow-xl transition-shadow duration-300"
+                className="bg-white p-8 rounded-xl border-2 border-[#29a5b7] hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="text-5xl mb-4">{service.icon}</div>
+                    <Image
+                  src={service.image}
+                  alt={service.title}
+                  width={64}
+                  height={64}
+                  className="h-16 w-16 object-contain mb-4"
+                />
                 <h3 className="text-xl font-semibold text-slate-900">{service.title}</h3>
               </motion.div>
             ))}

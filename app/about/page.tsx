@@ -54,7 +54,7 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-[#d3d3d3] from-slate-50 to-slate-100 p-8 rounded-xl border border-slate-200"
+              className="bg-white p-8 rounded-xl border-2 border-[#29a5b7]"
             >
               <h3 className="text-2xl font-bold text-[#29a5b7] mb-4">Rafael Arellano</h3>
               <p className="text-slate-700 leading-relaxed">{t("about.rafael")}</p>
@@ -66,7 +66,7 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-[#d3d3d3] from-slate-50 to-slate-100 p-8 rounded-xl border border-slate-200"
+              className="bg-white p-8 rounded-xl border-2 border-[#29a5b7]"
             >
               <h3 className="text-2xl font-bold text-[#29a5b7] mb-4">Daniella Ruz Ramos</h3>
               <p className="text-slate-700 leading-relaxed">{t("about.daniella")}</p>
@@ -78,7 +78,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-[#29a5b7]/10 bg-[#d3d3d3] border-l-4 border-[#29a5b7] p-8 rounded-r-lg"
+            className="bg-white border-2 border-[#29a5b7] p-8 rounded-lg"
           >
             <p className=" text-lg text-slate-700 leading-relaxed">{t("about.closing")}</p>
           </motion.div>

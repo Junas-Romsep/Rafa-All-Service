@@ -5,7 +5,6 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 
 export default function Home() {
-  // optional: you can remove next-intl entirely if you’re not using translations
   const t = useTranslations("home")
 
   return (
@@ -100,7 +99,7 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-[#d3d3d3] p-8 rounded-xl border border-teal-100 hover:shadow-lg transition-shadow duration-300"
+                className="bg-white p-8 rounded-xl border-2 border-[#29a5b7] hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="text-4xl mb-4">{item.icon}</div>
                 <h3 className="text-xl font-semibold text-slate-900 mb-2">

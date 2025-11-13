@@ -13,9 +13,13 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Rafa Allservice AB - Cleaning & Restaurant Staffing",
-  description: "Professional cleaning and restaurant staffing services in Stockholm",
+  title: "Rafa Allservice AB – Städ- och Restaurangbemanning",
+  description: "Professionella städ- och restaurangbemanningstjänster i Stockholm",
   generator: "v0.app",
+  icons: {
+        icon: '/logo/Logo.png',
+        apple: '/logo/Logo.png'
+      },  
 };
 
 export default function RootLayout({
