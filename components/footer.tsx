@@ -93,24 +93,35 @@ export default function Footer() {
         </div>
 
             {/* Divider */}
-            <div className="border-t border-gray-800 pt-8 flex items-center relative">
+            <div className="border-t border-gray-800 pt-8 w-full">
+              <div className="max-w-7xl mx-auto px-4">
 
-            {/* Left text */}
-            <p className="text-gray-400 text-sm">&copy; {currentYear} Rafa Allservice AB. All rights reserved.</p>
+                {/* Mobile = 1 column, Desktop = 3 columns */}
+                <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-4">
 
-            {/* Centered icon */}
-              <div className="mx-auto absolute left-1/2 -translate-x-1/2">
-                 <Link
+                  {/* Left text */}
+                  <p className="text-gray-400 text-sm">
+                    &copy; {currentYear} Rafa Allservice AB. All rights reserved.
+                  </p>
+
+                  {/* Center icon */}
+                  <div className="flex justify-center md:justify-center">
+                    <Link
                       href="https://www.instagram.com/rafaallserviceab/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-400 hover:text-[#E4405F] transition-colors"
                       aria-label="Följ oss på Instagram"
                     >
-                    <Instagram size={28} />
-                  </Link>
+                      <Instagram size={26} />
+                    </Link>
+                  </div>
+
+                  {/* Empty right column only for desktop */}
+                  <div className="hidden md:block"></div>
+                </div>
+              </div>
             </div>
-          </div>
       </div>
     </footer>
   )
