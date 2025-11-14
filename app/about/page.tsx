@@ -3,6 +3,8 @@
 import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
+import { Instagram } from "lucide-react"
 
 export default function About() {
   const t = useTranslations()
@@ -27,16 +29,16 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="mb-12 flex justify-center"
+            className=" mb-12 flex flex-col items-center"
           >
             <Image
-                src="/images/Daniandrafael.jpg"
-                alt="Rafa Allservice team - Daniella and Rafael"
-                width={288}
-                height={288}
-                className="h-64 w-64 md:h-72 md:w-72 object-cover rounded-xl shadow-lg border border-slate-200 ring-4 ring-[#29a5b7]/10 mx-auto"
-                priority
-              />
+              src="/images/Daniandrafael.jpg"
+              alt="Rafa Allservice team - Daniella and Rafael"
+              width={288}
+              height={288}
+              className="h-64 w-64 md:h-72 md:w-72 object-cover rounded-xl shadow-lg border border-slate-200 ring-4 ring-[#29a5b7]/10 mx-auto"
+              priority
+            />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -82,8 +84,29 @@ export default function About() {
           >
             <p className=" text-lg text-slate-700 leading-relaxed">{t("about.closing")}</p>
           </motion.div>
+
+
         </div>
       </section>
+      <section>
+      <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-4 flex flex-col items-center"
+          >
+            <Link
+              href="https://www.instagram.com/rafaallserviceab/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-black-400 hover:text-[#E4405F] transition-colors"
+            >
+              <Instagram size={42} />
+            </Link>
+          </motion.div>
+      </section>
+
     </main>
   )
 }

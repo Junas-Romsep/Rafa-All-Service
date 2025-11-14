@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Mail, Phone, MapPin } from "lucide-react"
+import { Mail, Phone, MapPin, Instagram } from "lucide-react"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -92,11 +92,25 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Divider */}
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between">
-          {/* Copyright */}
-          <p className="text-gray-400 text-sm">&copy; {currentYear} Rafa Allservice AB. All rights reserved.</p>
-        </div>
+            {/* Divider */}
+            <div className="border-t border-gray-800 pt-8 flex items-center relative">
+
+            {/* Left text */}
+            <p className="text-gray-400 text-sm">&copy; {currentYear} Rafa Allservice AB. All rights reserved.</p>
+
+            {/* Centered icon */}
+              <div className="mx-auto absolute left-1/2 -translate-x-1/2">
+                 <Link
+                      href="https://www.instagram.com/rafaallserviceab/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-[#E4405F] transition-colors"
+                      aria-label="Följ oss på Instagram"
+                    >
+                    <Instagram size={28} />
+                  </Link>
+            </div>
+          </div>
       </div>
     </footer>
   )
