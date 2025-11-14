@@ -10,8 +10,9 @@ export default function Services() {
 
   const cleaningServices = [
     { title: t("services.offices"), image: "/icon/Kontor.png" },
-    { title: t("services.schools"), image: "/icon/Skola.png" },
-    { title: t("services.preschools"), image: "/icon/Förskola.png" },
+    { title: t("services.schools"), image: "/icon/Förskola.png" },
+    { title: t("services.homes"), image: "/icon/Hemstädning.png" },
+    { title: t("services.windowCleaning"), image: "/icon/Fönster.png" }
   ]
 
   const restaurantServices = [

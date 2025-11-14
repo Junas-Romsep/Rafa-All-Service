@@ -33,7 +33,7 @@ export default function Home() {
               {t("tagline")}
             </p>
             <motion.a
-              href="mailto:inforafaallservicev@gmail.com"
+              href="mailto:info.rafaallservice@gmail.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
               className="inline-block bg-[#29a5b7] hover:bg-teal-600 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-300"

@@ -72,13 +72,13 @@ export default function Contact() {
                     <div>
                       <p className="text-slate-600 font-medium">{t("contact.daniella")}</p>
                       <a href="tel:+46762915820" className="text-[#29a5b7] hover:text-[#29a5b7]/90">
-                        076 291 58 20
+                        076 291 83 20
                       </a>
                     </div>
                     <div>
                       <p className="text-slate-600 font-medium">{t("contact.rafael")}</p>
                       <a href="tel:+46722785580" className="text-[#29a5b7] hover:text-[#29a5b7]/90">
-                        072 278 55 80
+                        072 278 85 50
                       </a>
                     </div>
                     <div>
